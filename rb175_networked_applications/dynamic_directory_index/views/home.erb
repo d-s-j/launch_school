@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <title><%= @title %></title>
+
+  <h1>Dynamic Directory Index</h1>
+
+  <a href="/">Sort Ascending</a>
+  <a href="/?sort=descending">Sort Descending</a>
+
+  <ul>
+    <% @files.each do |file| %>
+      <li>
+        <a href="<%= file %>"><%= file %></a>
+      </li>
+    <% end %>
+  </ul>
+</html>

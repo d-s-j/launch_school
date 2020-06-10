@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <body>
+    <%= yield %>
+
+    <ul>
+      <% @users.each do |name| %>
+        <% next if name.to_s == params[:name] %>
+        <li><a href="/users/<%= name %>" ><%= name %></a></li>
+      <% end %>
+    </ul>
+
+    <%= "There are #{@users.size} users with a total of #{count_interests} interests" %>
+  </body>
+</html>

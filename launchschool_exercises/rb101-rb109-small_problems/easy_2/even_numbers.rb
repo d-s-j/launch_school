@@ -1,0 +1,1 @@
+(1..99).each { |x| p x if x.even? }

@@ -1,0 +1,4 @@
+<h1><%= params[:name] %></h1>
+Email: <%= @data[params[:name].to_sym][:email] %>
+<br>
+Interests: <%= @data[params[:name].to_sym][:interests].join(", ") %>
