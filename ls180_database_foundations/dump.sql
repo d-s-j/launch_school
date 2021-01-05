@@ -21,81 +21,32 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: dylanjones
+-- Name: weather; Type: TABLE; Schema: public; Owner: dylanjones
 --
 
-CREATE TABLE public.users (
-    id integer NOT NULL,
-    full_name character varying(25) NOT NULL,
-    enabled boolean DEFAULT true,
-    last_login timestamp without time zone DEFAULT now(),
-    CONSTRAINT users_full_name_check CHECK (((full_name)::text <> ''::text))
+CREATE TABLE public.weather (
+    date date NOT NULL,
+    low integer NOT NULL,
+    high integer NOT NULL,
+    rainfall numeric(6,3) DEFAULT 0
 );
 
 
-ALTER TABLE public.users OWNER TO dylanjones;
+ALTER TABLE public.weather OWNER TO dylanjones;
 
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: dylanjones
+-- Data for Name: weather; Type: TABLE DATA; Schema: public; Owner: dylanjones
 --
 
-CREATE SEQUENCE public.users_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.users_id_seq OWNER TO dylanjones;
-
---
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dylanjones
---
-
-ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
-
-
---
--- Name: users id; Type: DEFAULT; Schema: public; Owner: dylanjones
---
-
-ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
-
-
---
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: dylanjones
---
-
-INSERT INTO public.users VALUES (1, 'John Smith', false, '2020-06-03 14:12:53.658314');
-INSERT INTO public.users VALUES (4, 'O''Leary', false, '2020-06-05 12:08:11.369234');
-INSERT INTO public.users VALUES (3, 'Harry Potter', true, '2020-06-03 15:15:06.689049');
-INSERT INTO public.users VALUES (5, 'Jane Smith', true, '2020-06-08 12:49:07.867286');
-INSERT INTO public.users VALUES (2, 'Alice Walker', true, '2020-06-03 15:15:06.689049');
-
-
---
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dylanjones
---
-
-SELECT pg_catalog.setval('public.users_id_seq', 4, true);
-
-
---
--- Name: users users_id_key; Type: CONSTRAINT; Schema: public; Owner: dylanjones
---
-
-ALTER TABLE ONLY public.users
-    ADD CONSTRAINT users_id_key UNIQUE (id);
-
-
---
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: dylanjones
---
-
-ALTER TABLE ONLY public.users
-    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+INSERT INTO public.weather VALUES ('2016-03-01', 34, 43, 0.117);
+INSERT INTO public.weather VALUES ('2016-03-02', 32, 44, 0.117);
+INSERT INTO public.weather VALUES ('2016-03-03', 31, 47, 0.156);
+INSERT INTO public.weather VALUES ('2016-03-04', 33, 42, 0.078);
+INSERT INTO public.weather VALUES ('2016-03-05', 39, 46, 0.273);
+INSERT INTO public.weather VALUES ('2016-03-06', 32, 43, 0.078);
+INSERT INTO public.weather VALUES ('2016-03-07', 29, 32, 0.000);
+INSERT INTO public.weather VALUES ('2016-03-08', 23, 31, 0.000);
+INSERT INTO public.weather VALUES ('2016-03-09', 17, 28, 0.000);
 
 
 --

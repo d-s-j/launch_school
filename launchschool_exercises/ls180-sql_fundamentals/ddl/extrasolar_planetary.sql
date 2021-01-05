@@ -5,7 +5,7 @@ CREATE DATABASE extrasolar;
 
 \c extrasolar
 
-/* Create 'stars' and 'planets table */
+/* Create 'stars' and 'planets' table */
 CREATE TABLE stars (
   id serial PRIMARY KEY,
   name varchar(25) UNIQUE NOT NULL,
