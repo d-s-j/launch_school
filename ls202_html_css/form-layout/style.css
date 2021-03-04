@@ -6,6 +6,14 @@ dd {
   margin: 0 0 25px 0;
 }
 
+dl {
+  margin-bottom: 0;
+}
+
+dl + dl {
+  margin-top: 0;
+}
+
 dt {
   margin-bottom: 5px;
 }
@@ -28,6 +36,18 @@ textarea {
   width: 100%;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: white;
+  border: 1px solid #cecece;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 0 8px;
+  width: 100%;
+}
+
 textarea {
   height: auto;
   resize: vertical;
@@ -39,34 +59,20 @@ ul {
   padding-left: 0;
 }
 
-dl.partial {
+.partial {
   box-sizing: border-box;
   display: inline-block;
   padding-right: 20px;
 }
 
-dl.city {
+.one-half {
   width: 50%;
 }
 
-dl.state {
+.quarter {
   width: 25%;
 }
 
-dl.zip {
+.right {
   padding-right: 0;
-  width: 25%;
-}
-
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: white;
-  border: 1px solid #cecece;
-  box-sizing: border-box;
-  height: 30px;
-  padding: 0 8px;
-  width: 100%;
 }

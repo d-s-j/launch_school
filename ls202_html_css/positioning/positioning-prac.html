@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Positioning</title>
+    <meta charset="utf-8" />
+    <style>
+      #fixed {
+        background-color: rgba(0, 0, 0, .6);
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1; /* 1 must be < 2 */
+      }
+
+      #positioned {
+        background-color: #ffc;
+        box-sizing: border-box;
+        left: 50%;
+        margin-left: -200px;
+        padding: 30px 15px;
+        position: fixed;
+        top: 20px;
+        width: 400px;
+        z-index: 2;
+      }
+
+      #positioned span {
+        background-color: pink;
+        height: 20px;
+        left: -10px;
+        position: absolute;
+        top: -10px;
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a scelerisque lectus. Maecenas risus tortor, 
+        dignissim eget nibh id, aliquam mollis nunc. Proin molestie efficitur tellus ut facilisis. Aenean faucibus 
+        imperdiet mollis. Curabitur sodales mattis sem at suscipit. Duis lectus ligula, iaculis volutpat egestas in, 
+        finibus sed justo. Cras a fringilla nunc. Phasellus pretium aliquam nibh ut fringilla. Aliquam hendrerit, 
+        ligula vel pulvinar ullamcorper, purus enim eleifend mi, non molestie purus nisl sit amet mauris. Fusce 
+        iaculis nisl at nisl auctor, quis venenatis nulla tincidunt. Etiam blandit justo eget lacinia fringilla. 
+        Vivamus venenatis eget diam vel commodo.
+      </p>
+      <p>
+        Sed a pellentesque nunc. Curabitur eleifend consectetur metus imperdiet venenatis. Duis dictum felis gravida 
+        sodales aliquam. Vestibulum neque augue, auctor id mi id, mollis imperdiet dolor. Sed lorem enim, dignissim 
+        vel varius et, ultrices eget purus. Nulla vitae viverra justo, sit amet finibus enim. Integer id malesuada 
+        leo, vel imperdiet massa.
+      </p>
+      <p>
+        Aliquam lobortis dignissim magna at aliquet. Etiam ultrices maximus mi, eget tempus diam. Integer imperdiet, 
+        ligula in sodales scelerisque, tellus ex auctor ex, a pellentesque ex nibh a est. Sed tincidunt lacinia quam, 
+        vel convallis tellus placerat vel. Nulla ex nunc, feugiat fringilla aliquet vitae, cursus quis risus. Proin 
+        id quam id odio dictum iaculis. Fusce rutrum, tortor vitae vehicula interdum, nunc turpis dictum quam, non 
+        accumsan nulla sem eu leo. Mauris nulla sapien, pretium quis faucibus id, faucibus ut sapien. Pellentesque 
+        congue ipsum eget pharetra tincidunt. Nunc in sagittis libero, a accumsan sem. In hac habitasse platea 
+        dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+        Pellentesque iaculis leo id mauris consectetur pellentesque. In hac habitasse platea dictumst.
+      </p>
+      <p>
+        In at egestas felis, at convallis odio. Sed ultrices scelerisque sapien vitae luctus. Pellentesque gravida 
+        suscipit nibh, et convallis dolor mollis id. Curabitur ultrices in libero at fermentum. Etiam tempus felis 
+        tellus, quis porta elit hendrerit et. Proin faucibus pulvinar efficitur. Sed risus enim, aliquam sed elit vel, 
+        sagittis rutrum tellus.
+      </p>
+      <p>
+        Quisque sit amet lobortis ante, in vestibulum nisi. Ut ac sagittis neque. Nullam sollicitudin ut enim eget 
+        laoreet. Sed arcu ex, lacinia nec ultrices quis, rhoncus eget ipsum. Suspendisse potenti. Aliquam malesuada, 
+        lectus eget tincidunt rutrum, mauris sem viverra nisl, venenatis malesuada ex sapien finibus lorem. Vestibulum 
+        varius ultrices odio, eu consequat enim mattis sed. Sed a tempus nisi. In lobortis eleifend erat sed finibus. 
+        Quisque lectus ligula, condimentum faucibus hendrerit ac, ullamcorper id risus. In nunc elit, egestas vel 
+        viverra et, malesuada sit amet ex. Vestibulum nec dui et purus ornare commodo. Quisque eu nisi non nunc 
+        finibus semper vel non metus. Aliquam pharetra sed ex sit amet ornare. Etiam sed semper diam. In nisi nisl, 
+        gravida ac euismod et, egestas et tellus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a scelerisque lectus. Maecenas risus tortor, 
+        dignissim eget nibh id, aliquam mollis nunc. Proin molestie efficitur tellus ut facilisis. Aenean faucibus 
+        imperdiet mollis. Curabitur sodales mattis sem at suscipit. Duis lectus ligula, iaculis volutpat egestas in, 
+        finibus sed justo. Cras a fringilla nunc. Phasellus pretium aliquam nibh ut fringilla. Aliquam hendrerit, 
+        ligula vel pulvinar ullamcorper, purus enim eleifend mi, non molestie purus nisl sit amet mauris. Fusce 
+        iaculis nisl at nisl auctor, quis venenatis nulla tincidunt. Etiam blandit justo eget lacinia fringilla. 
+        Vivamus venenatis eget diam vel commodo.
+      </p>
+      <p>
+        Sed a pellentesque nunc. Curabitur eleifend consectetur metus imperdiet venenatis. Duis dictum felis gravida 
+        sodales aliquam. Vestibulum neque augue, auctor id mi id, mollis imperdiet dolor. Sed lorem enim, dignissim 
+        vel varius et, ultrices eget purus. Nulla vitae viverra justo, sit amet finibus enim. Integer id malesuada 
+        leo, vel imperdiet massa.
+      </p>
+      <p>
+        Aliquam lobortis dignissim magna at aliquet. Etiam ultrices maximus mi, eget tempus diam. Integer imperdiet, 
+        ligula in sodales scelerisque, tellus ex auctor ex, a pellentesque ex nibh a est. Sed tincidunt lacinia quam, 
+        vel convallis tellus placerat vel. Nulla ex nunc, feugiat fringilla aliquet vitae, cursus quis risus. Proin 
+        id quam id odio dictum iaculis. Fusce rutrum, tortor vitae vehicula interdum, nunc turpis dictum quam, non 
+        accumsan nulla sem eu leo. Mauris nulla sapien, pretium quis faucibus id, faucibus ut sapien. Pellentesque 
+        congue ipsum eget pharetra tincidunt. Nunc in sagittis libero, a accumsan sem. In hac habitasse platea 
+        dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+        Pellentesque iaculis leo id mauris consectetur pellentesque. In hac habitasse platea dictumst.
+      </p>
+      <p>
+        In at egestas felis, at convallis odio. Sed ultrices scelerisque sapien vitae luctus. Pellentesque gravida 
+        suscipit nibh, et convallis dolor mollis id. Curabitur ultrices in libero at fermentum. Etiam tempus felis 
+        tellus, quis porta elit hendrerit et. Proin faucibus pulvinar efficitur. Sed risus enim, aliquam sed elit vel, 
+        sagittis rutrum tellus.
+      </p>
+      <p>
+        Quisque sit amet lobortis ante, in vestibulum nisi. Ut ac sagittis neque. Nullam sollicitudin ut enim eget 
+        laoreet. Sed arcu ex, lacinia nec ultrices quis, rhoncus eget ipsum. Suspendisse potenti. Aliquam malesuada, 
+        lectus eget tincidunt rutrum, mauris sem viverra nisl, venenatis malesuada ex sapien finibus lorem. Vestibulum 
+        varius ultrices odio, eu consequat enim mattis sed. Sed a tempus nisi. In lobortis eleifend erat sed finibus. 
+        Quisque lectus ligula, condimentum faucibus hendrerit ac, ullamcorper id risus. In nunc elit, egestas vel 
+        viverra et, malesuada sit amet ex. Vestibulum nec dui et purus ornare commodo. Quisque eu nisi non nunc 
+        finibus semper vel non metus. Aliquam pharetra sed ex sit amet ornare. Etiam sed semper diam. In nisi nisl, 
+        gravida ac euismod et, egestas et tellus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a scelerisque lectus. Maecenas risus tortor, 
+        dignissim eget nibh id, aliquam mollis nunc. Proin molestie efficitur tellus ut facilisis. Aenean faucibus 
+        imperdiet mollis. Curabitur sodales mattis sem at suscipit. Duis lectus ligula, iaculis volutpat egestas in, 
+        finibus sed justo. Cras a fringilla nunc. Phasellus pretium aliquam nibh ut fringilla. Aliquam hendrerit, 
+        ligula vel pulvinar ullamcorper, purus enim eleifend mi, non molestie purus nisl sit amet mauris. Fusce 
+        iaculis nisl at nisl auctor, quis venenatis nulla tincidunt. Etiam blandit justo eget lacinia fringilla. 
+        Vivamus venenatis eget diam vel commodo.
+      </p>
+      <p>
+        Sed a pellentesque nunc. Curabitur eleifend consectetur metus imperdiet venenatis. Duis dictum felis gravida 
+        sodales aliquam. Vestibulum neque augue, auctor id mi id, mollis imperdiet dolor. Sed lorem enim, dignissim 
+        vel varius et, ultrices eget purus. Nulla vitae viverra justo, sit amet finibus enim. Integer id malesuada 
+        leo, vel imperdiet massa.
+      </p>
+      <p>
+        Aliquam lobortis dignissim magna at aliquet. Etiam ultrices maximus mi, eget tempus diam. Integer imperdiet, 
+        ligula in sodales scelerisque, tellus ex auctor ex, a pellentesque ex nibh a est. Sed tincidunt lacinia quam, 
+        vel convallis tellus placerat vel. Nulla ex nunc, feugiat fringilla aliquet vitae, cursus quis risus. Proin 
+        id quam id odio dictum iaculis. Fusce rutrum, tortor vitae vehicula interdum, nunc turpis dictum quam, non 
+        accumsan nulla sem eu leo. Mauris nulla sapien, pretium quis faucibus id, faucibus ut sapien. Pellentesque 
+        congue ipsum eget pharetra tincidunt. Nunc in sagittis libero, a accumsan sem. In hac habitasse platea 
+        dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+        Pellentesque iaculis leo id mauris consectetur pellentesque. In hac habitasse platea dictumst.
+      </p>
+      <p>
+        In at egestas felis, at convallis odio. Sed ultrices scelerisque sapien vitae luctus. Pellentesque gravida 
+        suscipit nibh, et convallis dolor mollis id. Curabitur ultrices in libero at fermentum. Etiam tempus felis 
+        tellus, quis porta elit hendrerit et. Proin faucibus pulvinar efficitur. Sed risus enim, aliquam sed elit vel, 
+        sagittis rutrum tellus.
+      </p>
+      <p>
+        Quisque sit amet lobortis ante, in vestibulum nisi. Ut ac sagittis neque. Nullam sollicitudin ut enim eget 
+        laoreet. Sed arcu ex, lacinia nec ultrices quis, rhoncus eget ipsum. Suspendisse potenti. Aliquam malesuada, 
+        lectus eget tincidunt rutrum, mauris sem viverra nisl, venenatis malesuada ex sapien finibus lorem. Vestibulum 
+        varius ultrices odio, eu consequat enim mattis sed. Sed a tempus nisi. In lobortis eleifend erat sed finibus. 
+        Quisque lectus ligula, condimentum faucibus hendrerit ac, ullamcorper id risus. In nunc elit, egestas vel 
+        viverra et, malesuada sit amet ex. Vestibulum nec dui et purus ornare commodo. Quisque eu nisi non nunc 
+        finibus semper vel non metus. Aliquam pharetra sed ex sit amet ornare. Etiam sed semper diam. In nisi nisl, 
+        gravida ac euismod et, egestas et tellus.
+      </p>
+    </section>
+    <div id="positioned">
+      <span></span>
+      I'm positioned!
+    </div>
+    <div id="fixed"></div>
+  </body>
+</html>

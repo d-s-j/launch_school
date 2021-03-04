@@ -8,24 +8,29 @@
   <body>
     <form action="#">
       <fieldset>
-        <dl>
+        <dl class="one-half partial">
           <dt><label for="first_name">First Name</label></dt>
           <dd><input type="text" name="first_name" id="first_name" /></dd>
+        </dl><!--
 
+      --><dl class="one-half right partial">
           <dt><label for="last_name">Last Name</label></dt>
           <dd><input type="text" name="last_name" id="last_name" /></dd>
+        </dl>
 
+        <dl>
           <dt><label for="email">Email Address</label></dt>
           <dd><input type="email" name="email" id="email"
                autocapitalize="none" autocomplete="off" 
                placeholder="email@domain" /></dd>
         </dl>
 
-        <dl class="city partial">
+        <dl class="one-half partial">
           <dt><label for="city">City</label></dt>
           <dd><input type="text" name="city" id="city" /></dd>
         </dl><!--
-      --><dl class="state partial">
+
+      --><dl class="quarter partial">
           <dt><label for="state">State</label></dt>
           <dd> 
             <select name="state" id="state">
@@ -83,7 +88,8 @@
             </select>
           </dd>
         </dl><!--
-      --><dl class="zip partial">
+
+      --><dl class="quarter right partial">
           <dt><label for="zip">Zip</label></dt>
           <dd><input type="text" name="zip" id="zip" pattern="[0-9]{5}" /></dd>
         </dl>
