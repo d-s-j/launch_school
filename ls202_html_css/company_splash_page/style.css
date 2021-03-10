@@ -1,0 +1,59 @@
+@import url("whitespace-reset.css");
+
+body {
+  background: url("bg_body.gif");
+  font: normal 19px Avenir, Arial, sans-serif;
+}
+
+header {
+  margin: 0 auto;
+  padding: 158px 0 92px 0;
+  width: 1000px;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+}
+
+main {
+  background: white;
+  color: black;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 110px 95px 65px;
+  text-align: center;
+  width: 1000px;
+}
+
+h1 {
+  font: 32px "Avenir Heavy";
+  margin: 0 0 32px;
+}
+
+h2 {
+  color: rgb(62, 152, 178);
+  font: 22px "Avenir Black", sans-serif;
+  padding: 0 0 32px;
+}
+
+article:first-of-type {
+  padding: 0 0 175px;
+}
+
+footer {
+  background: rgb(231, 231, 231);
+  box-sizing: border-box;
+  margin: 0 auto 142px;
+  padding: 33px 300px;
+  width: 1000px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav img {
+  display: block;
+}

@@ -1,0 +1,161 @@
+@import url("whitespace-reset.css");
+
+body {
+  background: url("images/bg_body.gif");
+  color: rgb(69, 73, 76);
+  font: normal 20px "Avenir", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+/* Header */
+
+header {
+  padding: 135px 0 45px;
+}
+
+header h1 {
+  margin-bottom: 120px;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+}
+
+header nav {
+  font: 26px "Avenir Medium";
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+header nav li {
+  margin: 0 40px;
+}
+
+header nav a {
+  color: rgb(205, 205, 205);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.active {
+  color: rgb(109, 185, 255);
+}
+
+/* Main */
+
+main {
+  background: white;
+  padding: 110px 0 35px;
+}
+
+.column {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+h2 {
+  font: 36px "Avenir Heavy";
+  margin-bottom: 35px;
+}
+
+h3 {
+  color: rgb(62, 89, 178);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h2::before, h2::after {
+  content: "\2022";
+  display: inline-block;
+  font-size: 30px;
+  padding: 0 27px;
+  vertical-align: 1px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+article p {
+  padding: 0 110px;
+}
+
+#projects figure {
+  padding: 0 0 40px 0;
+}
+
+#projects img {
+  display: block;
+}
+
+#team ul {
+  display: flex;
+  justify-content: center;
+  margin: 135px 0 165px;
+}
+
+#team li {
+  margin: 0 30px;
+}
+
+#team a {
+  color: rgb(62, 89, 178);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+#team li img {
+  display: block;
+  margin-bottom: 25px;
+}
+
+/* Footer */
+
+footer {
+  background: rgb(231, 231, 231);
+  padding: 75px 0;
+}
+
+footer p {
+  color: rgb(178, 178, 178);
+}
+
+footer nav {
+  margin: 45px 0 0;
+}
+
+footer li {
+  margin: 0 62px;
+}
+
+footer li a {
+  background:
+    transparent
+    url("https://d3jtzah944tvom.cloudfront.net/202/projects/lesson_7/spacedesign/images/icons_social-media.png")
+    0 0 no-repeat;
+  display: block;
+  height: 46px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 46px;
+}
+
+footer li a.twitter {
+  background-position: 0 0;
+}
+
+footer li a.facebook {
+  background-position: 0 -46px;
+}
+
+footer li a.email {
+  background-position: 0 -92px;
+}
+
+footer li a.instagram {
+  background-position: 0 -138px;
+}
