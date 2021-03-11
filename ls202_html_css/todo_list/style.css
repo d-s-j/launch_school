@@ -1,0 +1,205 @@
+@import url("whitespace-reset.css");
+
+body {
+  display: grid;
+  font: 200 16px Helvetica, Arial, sans-serif;
+  grid-template-columns: 1.5fr 3fr;
+  box-shadow: 0 5px 5px #b5b5b5;
+  width: 1000px;
+}
+
+li {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* nav */
+
+nav {
+  background: #464f77;
+  color: #b2b5c3;
+  padding-top: 70px;
+  padding-bottom: 200px;
+}
+
+nav a {
+  color: #b2b5c3;
+  text-decoration: none;
+}
+
+nav ul:first-of-type {
+  margin-bottom: 50px;
+}
+
+nav li {
+  padding: 12px 30px 12px 134px;
+}
+
+nav li:first-of-type {
+  padding-left: 100px;
+}
+
+nav li h2 {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+nav li h2 img {
+  margin-right: 10px;
+}
+
+nav .active {
+  background: #38405e;
+}
+
+nav .completed li:not(:first-child) {
+  text-decoration: line-through;
+}
+
+nav .active a,
+nav .active p {
+  color: #ffffff;
+}
+
+/* main */
+
+main {
+  background: #ffffff;
+  color: #060606;
+  padding: 25px 25px 0 25px;
+}
+
+main h1 {
+  font-size: 22px;
+  font-weight: 200;
+  margin-right: 14px;
+  margin-bottom: 30px;
+  padding-left: 12px;
+}
+
+
+main li {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 12px;
+}
+
+main label {
+  cursor: pointer;
+}
+
+main label:hover {
+  color: #148fd5;
+}
+
+main label.completed {
+  color: #b3b3b3;
+}
+
+main label input[type="image"],
+main label img {
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+main .completed {
+  text-decoration: line-through;
+}
+
+/* circle */
+
+h1,
+h2,
+p.circle {
+  display: inline-block;
+}
+
+.circle {
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+main .circle {
+  background: #148fd5;
+  color: #ffffff;
+}
+
+nav .circle {
+  background: #6b7292;
+  color: #b2b5c3;
+}
+
+nav .active p.circle {
+  background: #148fd5;
+}
+
+/* nav-toggle */
+
+
+label[for="nav-toggle"] {
+  display: block;
+  margin-bottom: 45px;
+  padding-left: 10px;
+  visibility: hidden;
+}
+
+label[for="nav-toggle"] img {
+  width: 30px;
+}
+
+/* modal */
+
+aside {
+  background: #ffffff;
+  display: none;
+  padding: 25px;
+  position: absolute;
+  z-index: 2;
+}
+
+aside fieldset {
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"]:checked ~ aside {
+  display: block;
+}
+
+input[type="checkbox"]:checked + aside:before {
+  background: rgba(0, 0, 0, .4);
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* screen size */
+
+@media (max-width: 768px) {
+  body {
+
+  }
+
+  label[for="nav-toggle"] {
+    visibility: visible;
+  }
+
+  header {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ header {
+    display: block;
+  }
+
+}
