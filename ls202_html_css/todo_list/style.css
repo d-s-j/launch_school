@@ -6,6 +6,7 @@ body {
   grid-template-columns: 1.5fr 3fr;
   box-shadow: 0 5px 5px #b5b5b5;
   width: 1000px;
+  min-width: 768px;
 }
 
 li {
